@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B5074576-E9B5-4547-A500-DA1BF76559C9}</ProjectGuid>
+    <OutputName>STARTPROG</OutputName>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <RootNamespace>STARTPROG</RootNamespace>
+    <ProductVersion>1.0.0.0</ProductVersion>
+    <StartupObject>Main</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <OutputPath>C:\TRANSAERO-SOURCE\TRANSSEND\dll</OutputPath>
+    <WarningLevel>2</WarningLevel>
+    <MaxError>100</MaxError>
+    <ConfigurationCopybookPaths>
+    </ConfigurationCopybookPaths>
+    <PlatformTarget>x86</PlatformTarget>
+    <Pointer64>False</Pointer64>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateDirectivesFile>False</GenerateDirectivesFile>
+    <Verify>False</Verify>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <SourceFormat>Variable</SourceFormat>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <WarningLevel>2</WarningLevel>
+    <MaxError>100</MaxError>
+    <SourceFormat>Variable</SourceFormat>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="APPROJ">
+      <Name>APPROJ</Name>
+      <HintPath>..\..\dll\APPROJ.dll</HintPath>
+    </Reference>
+    <Reference Include="ARPROJ">
+      <Name>ARPROJ</Name>
+      <HintPath>..\..\dll\ARPROJ.dll</HintPath>
+    </Reference>
+    <Reference Include="CKPROJ">
+      <Name>CKPROJ</Name>
+      <HintPath>..\..\dll\CKPROJ.dll</HintPath>
+    </Reference>
+    <Reference Include="GLPROJ">
+      <Name>GLPROJ</Name>
+      <HintPath>..\..\dll\GLPROJ.dll</HintPath>
+    </Reference>
+    <Reference Include="ICPROJ">
+      <Name>ICPROJ</Name>
+      <HintPath>..\..\dll\ICPROJ.dll</HintPath>
+    </Reference>
+    <Reference Include="IOPROJ">
+      <Name>IOPROJ</Name>
+      <HintPath>..\..\dll\IOPROJ.dll</HintPath>
+    </Reference>
+    <Reference Include="MSPROJ">
+      <Name>MSPROJ</Name>
+      <HintPath>..\..\dll\MSPROJ.dll</HintPath>
+    </Reference>
+    <Reference Include="OEPROJ">
+      <Name>OEPROJ</Name>
+      <HintPath>..\..\dll\OEPROJ.dll</HintPath>
+    </Reference>
+    <Reference Include="PIPROJ">
+      <Name>PIPROJ</Name>
+      <HintPath>..\..\dll\PIPROJ.dll</HintPath>
+    </Reference>
+    <Reference Include="POPROJ">
+      <Name>POPROJ</Name>
+      <HintPath>..\..\dll\POPROJ.dll</HintPath>
+    </Reference>
+    <Reference Include="Printer">
+      <Name>Printer</Name>
+      <HintPath>..\..\dll\Printer.exe</HintPath>
+    </Reference>
+    <Reference Include="SAPROJ">
+      <Name>SAPROJ</Name>
+      <HintPath>..\..\dll\SAPROJ.dll</HintPath>
+    </Reference>
+    <Reference Include="SMPROJ">
+      <Name>SMPROJ</Name>
+      <HintPath>..\..\dll\SMPROJ.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UctScreen">
+      <Name>UctScreen</Name>
+      <HintPath>..\..\dll\UctScreen.dll</HintPath>
+    </Reference>
+    <Reference Include="VBroutines">
+      <Name>VBroutines</Name>
+      <HintPath>..\..\dll\VBroutines.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="System" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Text" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cbl">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cbl">
+      <DependentUpon>Form1.cbl</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cbl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\STARTUP\app.config">
+      <Link>app.config</Link>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Micro Focus\Visual COBOL\v1.0\MicroFocus.COBOL.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
